@@ -1,0 +1,10 @@
+LIMPAR - btnLimpra_Click()
+Fechar - close()
+
+
+Limpar:
+txtN1.Clear();
+txtN2.Clear();
+lblSinal.Text="?";
+lblResultado.Text="?";
+txtN1.Focus();
