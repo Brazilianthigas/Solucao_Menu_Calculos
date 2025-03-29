@@ -37,5 +37,32 @@ namespace Projeto_Menu_Calculos
             FrmCalcSuper.MdiParent = this;
             FrmCalcSuper.Show();
         }
+
+        private void cascataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Organiza os formulários filhos em cascata, no caso as calculadoras
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void ladoALadoHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Organiza os formulários filhos lado a lado na horizontal
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void ladoALadoVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Organiza os formulários filhos lado a lado na vertical
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void fecharTodasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Fecha todos as Janelas abertas
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
+        }
     }
 }
